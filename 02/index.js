@@ -1,15 +1,17 @@
 const palavras = ["livro", "caneta", "sol", "carro", "orelha"];
- 
 
-function verificarPalavras (palavras) {
-    for(let palavra of palavras){
-        if(palavra.length ){
-            console.log(`existe palavra inválida`);
-            break;
-        } 
-               
-                
+function verificarPalavras(palavras) {
+    const temPalavraInvalida = palavras.some(palavra => palavra.length > 5);
+
+    if (temPalavraInvalida) {
+        console.log('existe palavra inválida');
+    } else {
+        console.log('array validado');
     }
 }
 
-verificarPalavras (palavras)
+// Testes
+verificarPalavras(["livro", "caneta", "sol", "carro", "orelha"]);  
+verificarPalavras(["livro", "sol", "carro", "lua", "tela"]);        
+verificarPalavras(["abacaxi", "sol"]);                              
+verificarPalavras(["sol", "lua", "mar", "paz"]);                  
