@@ -4,4 +4,4 @@ const arrayPares = numeros.filter((numero) => {
   return numero % 2 === 0;
 });
 
-console.log(arrayPares); // [98, -76, 0, 12, 60, 44]
+console.log(arrayPares);  
